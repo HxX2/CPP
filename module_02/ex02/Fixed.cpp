@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 23:06:21 by zlafou            #+#    #+#             */
-/*   Updated: 2023/03/17 18:55:06 by zlafou           ###   ########.fr       */
+/*   Updated: 2023/03/17 19:47:03 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Fixed& Fixed::operator=(Fixed const &src)
 
 bool Fixed::operator>(Fixed const &num) const
 {
-	if (this->_fixedPointValue > num._fixedPointValue)
+	if (this->toFloat() > num.toFloat())
 		return true;
 	else 
 		return false;
@@ -52,7 +52,7 @@ bool Fixed::operator>(Fixed const &num) const
 
 bool Fixed::operator<(Fixed const &num) const
 {
-	if (this->_fixedPointValue < num._fixedPointValue)
+	if (this->toFloat() < num.toFloat())
 		return true;
 	else 
 		return false;
@@ -60,7 +60,7 @@ bool Fixed::operator<(Fixed const &num) const
 
 bool Fixed::operator>=(Fixed const &num) const
 {
-	if (this->_fixedPointValue >= num._fixedPointValue)
+	if (this->toFloat() >= num.toFloat())
 		return true;
 	else 
 		return false;
@@ -68,7 +68,7 @@ bool Fixed::operator>=(Fixed const &num) const
 
 bool Fixed::operator<=(Fixed const &num) const
 {
-	if (this->_fixedPointValue <= num._fixedPointValue)
+	if (this->toFloat() <= num.toFloat())
 		return true;
 	else 
 		return false;
@@ -76,7 +76,7 @@ bool Fixed::operator<=(Fixed const &num) const
 
 bool Fixed::operator==(Fixed const &num) const
 {
-	if (this->_fixedPointValue == num._fixedPointValue)
+	if (this->toFloat() == num.toFloat())
 		return true;
 	else 
 		return false;
@@ -84,7 +84,7 @@ bool Fixed::operator==(Fixed const &num) const
 
 bool Fixed::operator!=(Fixed const &num) const
 {
-	if (this->_fixedPointValue != num._fixedPointValue)
+	if (this->toFloat() != num.toFloat())
 		return true;
 	else 
 		return false;

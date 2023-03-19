@@ -6,11 +6,11 @@
 #    By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/11 18:45:52 by zlafou            #+#    #+#              #
-#    Updated: 2023/03/14 00:58:44 by zlafou           ###   ########.fr        #
+#    Updated: 2023/03/19 17:51:21 by zlafou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-CC = clang++
+CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address -g
 

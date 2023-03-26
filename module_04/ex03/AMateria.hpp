@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 19:20:21 by zlafou            #+#    #+#             */
-/*   Updated: 2023/03/23 19:37:07 by zlafou           ###   ########.fr       */
+/*   Updated: 2023/03/26 22:26:39 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,17 @@
 
 # include <iostream>
 # include <string>
+# include "ICharacter.hpp"
 
+class ICharacter;
 class AMateria
 {
 	protected:
 		std::string _type;
+		std::string _xp;
 	public:
 		AMateria();
-		~AMateria();
+		virtual ~AMateria();
 		AMateria(const AMateria& src);
 		AMateria& operator=(const AMateria& src);
 		

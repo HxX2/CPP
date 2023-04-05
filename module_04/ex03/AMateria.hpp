@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/23 19:20:21 by zlafou            #+#    #+#             */
-/*   Updated: 2023/03/26 22:26:39 by zlafou           ###   ########.fr       */
+/*   Updated: 2023/03/28 02:55:22 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class AMateria
 {
 	protected:
 		std::string _type;
-		std::string _xp;
 	public:
 		AMateria();
 		virtual ~AMateria();

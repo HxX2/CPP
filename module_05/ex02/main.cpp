@@ -8,23 +8,23 @@ int main()
 {
 	{
 		Bureaucrat hamid("Hamid", 4);
-		PresidentialPardonForm form("Idara");
+		PresidentialPardonForm form("Farid");
 
 		hamid.signForm(form);
 		form.execute(hamid);
 	}
 	std::cout << std::endl;
 	{
-		Bureaucrat Farid("Farid", 75);
-		ShrubberyCreationForm form("Zira3a");
+		Bureaucrat farid("Farid", 75);
+		ShrubberyCreationForm form("Khalid");
 
-		Farid.signForm(form);
-		form.execute(Farid);
+		farid.signForm(form);
+		form.execute(farid);
 	}
 	std::cout << std::endl;
 	{
 		Bureaucrat khalid("Khalid", 44);
-		RobotomyRequestForm form("Sina3a");
+		RobotomyRequestForm form("Hamid");
 
 		khalid.signForm(form);
 		form.execute(khalid);

@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 09:06:40 by zlafou            #+#    #+#             */
-/*   Updated: 2023/10/15 10:15:30 by zlafou           ###   ########.fr       */
+/*   Updated: 2023/10/16 07:28:33 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ private:
 	int _grade;
 
 public:
+	Bureaucrat();
 	Bureaucrat(std::string name, int grade);
 	~Bureaucrat();
 	Bureaucrat(const Bureaucrat &src);

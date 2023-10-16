@@ -1,5 +1,9 @@
 #include "Form.hpp"
 
+Form::Form() : _name("default"), _grade_to_sign(1), _grade_to_execute(1)
+{
+}
+
 Form::~Form()
 {
 }

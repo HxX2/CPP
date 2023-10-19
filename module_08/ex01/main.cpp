@@ -66,6 +66,35 @@ int main()
 			std::cerr << e.what() << '\n';
 		}
 	}
+	std::cout << "------" << std::endl;
+	{
+		try
+		{
+			Span sp = Span(10);
+			std::deque<int> deq;
+
+			sp.addNumber(5);
+			sp.addNumber(3);
+			sp.addNumber(17);
+			sp.addNumber(9);
+			sp.addNumber(11);
+
+			deq.push_back(5);
+			deq.push_back(3);
+			deq.push_back(17);
+			deq.push_back(9);
+			deq.push_back(11);
+			// deq.push_back(0);
+
+			sp.addRange(deq.begin(), deq.end());
+			std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+			std::cout << "Longest span: " << sp.longestSpan() << std::endl;
+		}
+		catch (const std::exception &e)
+		{
+			std::cerr << e.what() << '\n';
+		}
+	}
 
 	return 0;
 }

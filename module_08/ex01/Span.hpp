@@ -5,6 +5,8 @@
 #include <string>
 #include <exception>
 #include <vector>
+#include <list>
+#include <deque>
 #include <algorithm>
 
 class Span
@@ -23,6 +25,14 @@ public:
 	void addNumber(int n);
 	int shortestSpan();
 	int longestSpan();
+
+	template <typename Iterator>
+	void addRange(Iterator begin, Iterator end)
+	{
+		if (_vec.size() + std::distance(begin, end) > _n)
+			throw FullSpanException();
+		_vec.insert(_vec.end(), begin, end);
+	}
 
 	class FullSpanException : public std::exception
 	{

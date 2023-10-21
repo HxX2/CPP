@@ -11,7 +11,7 @@ int main()
 		PresidentialPardonForm form("Farid");
 
 		hamid.signForm(form);
-		form.execute(hamid);
+		hamid.executeForm(form);
 	}
 	std::cout << std::endl;
 	{
@@ -19,7 +19,7 @@ int main()
 		ShrubberyCreationForm form("Khalid");
 
 		farid.signForm(form);
-		form.execute(farid);
+		farid.executeForm(form);
 	}
 	std::cout << std::endl;
 	{
@@ -27,7 +27,7 @@ int main()
 		RobotomyRequestForm form("Hamid");
 
 		khalid.signForm(form);
-		form.execute(khalid);
+		khalid.executeForm(form);
 	}
 
 	return (0);

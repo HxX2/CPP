@@ -6,7 +6,7 @@
 /*   By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/15 09:06:40 by zlafou            #+#    #+#             */
-/*   Updated: 2023/10/16 07:30:54 by zlafou           ###   ########.fr       */
+/*   Updated: 2023/10/21 17:21:27 by zlafou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ public:
 	void incrementGrade();
 	void decrementGrade();
 	void signForm(AForm &f);
+	void executeForm(AForm const &form);
 
 	class GradeTooHighException : public std::exception
 	{

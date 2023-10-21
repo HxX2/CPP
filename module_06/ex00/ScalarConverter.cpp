@@ -37,7 +37,7 @@ void ScalarConverter::convert(std::string str)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << "impossible" << std::endl;
+		std::cerr << "impossible" << std::endl;
 	}
 
 	try
@@ -49,7 +49,7 @@ void ScalarConverter::convert(std::string str)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << "impossible" << std::endl;
+		std::cerr << "impossible" << std::endl;
 	}
 
 	try
@@ -66,7 +66,7 @@ void ScalarConverter::convert(std::string str)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << "impossible" << std::endl;
+		std::cerr << "impossible" << std::endl;
 	}
 
 	try
@@ -83,6 +83,6 @@ void ScalarConverter::convert(std::string str)
 	}
 	catch (std::exception &e)
 	{
-		std::cout << "impossible" << std::endl;
+		std::cerr << "impossible" << std::endl;
 	}
 }

@@ -6,13 +6,13 @@
 #    By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 08:59:39 by zlafou            #+#    #+#              #
-#    Updated: 2023/10/19 09:18:03 by zlafou           ###   ########.fr        #
+#    Updated: 2023/10/22 17:38:32 by zlafou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
 SRCS = main.cpp
 

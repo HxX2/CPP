@@ -23,8 +23,8 @@ public:
 	Span(unsigned int n);
 
 	void addNumber(int n);
-	int shortestSpan();
-	int longestSpan();
+	int shortestSpan() const;
+	long longestSpan() const;
 
 	template <typename Iterator>
 	void addRange(Iterator begin, Iterator end)

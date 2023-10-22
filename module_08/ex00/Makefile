@@ -6,7 +6,7 @@
 #    By: zlafou <zlafou@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/16 08:59:39 by zlafou            #+#    #+#              #
-#    Updated: 2023/10/16 13:47:53 by zlafou           ###   ########.fr        #
+#    Updated: 2023/10/22 17:50:09 by zlafou           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,12 +15,13 @@ CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 SRCS = main.cpp
+HEADERS = easyfind.hpp
 
 NAME = main
 
 all: $(NAME)
 
-$(NAME): $(SRCS)
+$(NAME): $(SRCS) $(HEADERS)
 	$(CC) $(CFLAGS) $(SRCS) -o $(NAME)
 
 clean:

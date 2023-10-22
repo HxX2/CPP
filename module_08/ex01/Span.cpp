@@ -35,26 +35,28 @@ void Span::addNumber(int n)
 	_vec.push_back(n);
 }
 
-int Span::shortestSpan()
+int Span::shortestSpan() const
 {
-	if (_vec.size() <= 1)
+	std::vector<int> tmp(_vec);
+	if (tmp.size() <= 1)
 		throw NoSpanException();
-	std::sort(_vec.begin(), _vec.end());
-	int min = _vec[1] - _vec[0];
-	for (unsigned int i = 1; i < _vec.size(); i++)
+	std::sort(tmp.begin(), tmp.end());
+	int min = tmp[1] - tmp[0];
+	for (unsigned int i = 1; i < tmp.size(); i++)
 	{
-		if (_vec[i] - _vec[i - 1] < min)
-			min = _vec[i] - _vec[i - 1];
+		if (tmp[i] - tmp[i - 1] < min)
+			min = tmp[i] - tmp[i - 1];
 	}
 	return min;
 }
 
-int Span::longestSpan()
+long Span::longestSpan() const
 {
-	if (_vec.size() <= 1)
+	std::vector<int> tmp(_vec);
+	if (tmp.size() <= 1)
 		throw NoSpanException();
-	std::sort(_vec.begin(), _vec.end());
-	return _vec[_vec.size() - 1] - _vec[0];
+	std::sort(tmp.begin(), tmp.end());
+	return static_cast<long>(tmp[tmp.size() - 1]) - tmp[0];
 }
 
 const char *Span::FullSpanException::what() const throw()

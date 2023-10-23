@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include "Array.hpp"
 
 // #define MAX_VAL 750
@@ -54,24 +55,43 @@
 
 int main()
 {
-	Array<int> arr(5);
-	Array<int> arr2(5);
-
-	for (int i = 0; i < 5; i++)
+	try
 	{
-		arr[i] = i;
-		arr2[i] = i + 5;
+		Array<int> arr(5);
+		Array<int> arr2(5);
+		Array<std::string> strarr(0);
+		Array<std::string> strarr2(2);
+
+		strarr2[0] = "Hello";
+		strarr2[1] = "World";
+
+		std::cout << "strarr2: " << std::endl;
+		for (int i = 0; i < 2; i++)
+			std::cout << "content: " + strarr2[i] << " | " << "size: " << strarr2[i].size() << std::endl;
+		std::cout << std::endl;
+
+		for (int i = 0; i < 5; i++)
+		{
+			arr[i] = i;
+			arr2[i] = i + 5;
+		}
+
+		std::cout << "arr: ";
+		for (int i = 0; i < 5; i++)
+			std::cout << arr[i] << " ";
+		std::cout << std::endl;
+
+		std::cout << "arr2: ";
+		for (int i = 0; i < 5; i++)
+			std::cout << arr2[i] << " ";
+		std::cout << std::endl;
+
+		std::cout << strarr[0] << std::endl;
 	}
-
-	std::cout << "arr: ";
-	for (int i = 0; i < 5; i++)
-		std::cout << arr[i] << " ";
-	std::cout << std::endl;
-
-	std::cout << "arr2: ";
-	for (int i = 0; i < 5; i++)
-		std::cout << arr2[i] << " ";
-	std::cout << std::endl;
-
-	return 0;
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << std::endl;
+	}
+	
+		return 0;
 }

@@ -26,20 +26,20 @@ int main()
 		std::stack<int> s(mstack);
 		std::cout << s.top()<< std::endl;
 	}
-	std::cout << "==========[ List ]==========" << std::endl;
+	std::cout << "==========[ Mutant Stack (vec) ]==========" << std::endl;
 	{
-		std::list<int> lst;
-		lst.push_back(5);
-		lst.push_back(17);
-		std::cout << "[lst] top: "<< lst.back() << std::endl;
-		lst.pop_back();
-		std::cout << "[lst] size: " <<lst.size() << std::endl;
-		lst.push_back(3);
-		lst.push_back(5);
-		lst.push_back(737);
-		lst.push_back(0);
-		std::list<int>::iterator it = lst.begin();
-		std::list<int>::iterator ite = lst.end();
+		MutantStack<int, std::vector<int> > mtv;
+		mtv.push(5);
+		mtv.push(17);
+		std::cout << "[mtv] top: "<< mtv.top() << std::endl;
+		mtv.pop();
+		std::cout << "[mtv] size: " <<mtv.size() << std::endl;
+		mtv.push(3);
+		mtv.push(5);
+		mtv.push(737);
+		mtv.push(0);
+		MutantStack<int, std::vector<int> >::iterator it = mtv.begin();
+		MutantStack<int, std::vector<int> >::iterator ite = mtv.end();
 		++it;
 		--it;
 		while (it != ite)

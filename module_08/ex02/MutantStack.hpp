@@ -29,14 +29,7 @@ public:
 		this->std::stack<T, Container>::operator=(src);
 		return *this;
 	};
-
-	void push(T val) { this->c.push_back(val); };
-	void pop() { this->c.pop_back(); };
-	T top() { return this->c.back(); };
-	const T top() const { return this->c.back(); };
-	size_t size() const { return this->c.size(); };
-
-
+	
 	iterator begin() { return this->c.begin(); };
 	const_iterator begin() const { return this->c.begin(); };
 	iterator end() { return this->c.end(); };

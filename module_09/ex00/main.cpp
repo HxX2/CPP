@@ -4,7 +4,7 @@ int main(int ac, char **av)
 {
 	if (ac != 2)
 	{
-		std::cout << "Usage: ./btc [filename]" << std::endl;
+		std::cerr << "Error: could not open file." << std::endl;
 		return 1;
 	}
 

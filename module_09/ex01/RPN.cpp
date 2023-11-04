@@ -49,7 +49,6 @@ int RPN::calculate()
 
 	while (std::getline(ss, token, ' '))
 	{
-		std::cout << "token: " << token << std::endl;
 		if (std::isdigit(token[0]) || ((token[0] == '-' || token[0] == '+') && std::isdigit(token[1])))
 			stack.push(stoi(token));
 		else

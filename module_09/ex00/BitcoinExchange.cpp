@@ -23,7 +23,7 @@ BitcoinExchange::BitcoinExchange(std::string inputfile)
 
 	if (!data.is_open())
 	{
-		std::cout << "Error: could not open file" << std::endl;
+		std::cout << "Error: could not open file." << std::endl;
 		exit(1);
 	}
 	std::string line;
@@ -66,8 +66,8 @@ void BitcoinExchange::run()
 			if (!_btcMap.count(date))
 				it--;
 			if (it == _btcMap.end())
-				throw "Error: no data";
-			std::cout << date << " " << rate << " => " << rate * it->second << std::endl;
+				throw "Error: no data.";
+			std::cout << date << " => " << rate << " => " << rate * it->second << std::endl;
 		}
 		catch (const char *e)
 		{
@@ -75,7 +75,7 @@ void BitcoinExchange::run()
 		}
 		catch (...)
 		{
-			std::cout << "Error: invalid input => " << _line << std::endl;
+			std::cout << "Error: bad input => " << _line << std::endl;
 		}
 	}
 }
@@ -108,38 +108,38 @@ void BitcoinExchange::validate(const std::string &date, const std::string &price
 		throw false;
 
 	if (date.size() != 10)
-		throw "Error: invalid date";
+		throw "Error: invalid date.";
 	
 	for(size_t i = 0; i < date.size(); i++)
 	{
 		if (i == 4 || i == 7)
 		{
 			if (date[i] != '-')
-				throw "Error: invalid date";
+				throw "Error: invalid date.";
 		}
 		else if (!std::isdigit(date[i]))
-			throw "Error: invalid date";
+			throw "Error: invalid date.";
 	}
 
 	if (!checkDate(date))
-		throw "Error: invalid date";
+		throw "Error: invalid date.";
+
+	if (stod(price) > 1000)
+		throw "Error: too large a number.";
+
+	if (stod(price) < 0)
+		throw "Error: not a positive number.";
 
 	if (price[0] == '.')
-		throw "Error: invalid price";
+		throw "Error: invalid price.";
 	
 	for(size_t i = 0; i < price.size(); i++)
 	{
 		if (price[i] == '.')
 			continue;
 		if (!std::isdigit(price[i]))
-			throw "Error: invalid price";
+			throw "Error: invalid price.";
 	}
-
-	if (stod(price) > 1000)
-		throw "Error: too large a number";
-
-	if (stod(price) < 0)
-		throw "Error: not a positive number";
 }
 
 bool BitcoinExchange::checkDate(const std::string &date)
